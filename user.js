@@ -2,7 +2,7 @@ import express from "express";
 import path, { dirname } from "path"
 import { fileURLToPath } from "url";
 import bcrypt from "bcrypt";
-// import collection from "./DB/Config"
+import collection from "./DB/Config"
 import { name } from "ejs";
 // import { Collection } from "mongoose";
 
