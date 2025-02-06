@@ -1,10 +1,9 @@
 
-import mongoose, { connect, model } from "mongoose";
-import { Model } from "mongoose";
-import { model } from "mongoose";
-const connect= mongoose.connect("mongodb://localhost:27017/User");
+import mongoose , { connect, model } from 'mongoose';
 
-connect.then(()=>{
+const connection= mongoose.connect("mongodb://localhost:27017/User");
+
+connection.then(()=>{
     console.log("Connected");    
 }).catch(()=>{
     console.log("not Connected ");
@@ -28,9 +27,9 @@ const Register = new mongoose.Schema({
         type:String,
         required:true
     }
-})
+});
 
-// const collection = new  mongoose.model("UserAuth",Register);
-// module.exports = collection;
+const collection = new mongoose.model("UserAuth",Register);
+export default collection;
 
-module.exports = mongoose.model("UserAuth",Register);
+// module.exports= collections;
